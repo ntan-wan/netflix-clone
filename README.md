@@ -1,5 +1,11 @@
-# Vue + Tailwind + Pinia + vue-router template
+# Netflix Clone
+ Recreate Netflix website and it's functionality.
+ 
+## How to Start
+Run `yarn` and `yarn dev`.
 
-Run:
-    yarn
-    yarn dev
+## Tech stacks
+- Vue 3
+-  Vue router
+- Pinia
+- Tailwind
