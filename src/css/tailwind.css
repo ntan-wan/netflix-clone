@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    
+    /* font */
+    @font-face {
+        font-family: 'netflix-regular';
+        src: url('@/assets/fonts/netflix-sans-font/NetflixSans-Regular.woff2');
+        font-weight: normal;
+    }
+    @font-face {
+        font-family: 'netflix-light';
+        src: url('@/assets/fonts/netflix-sans-font/NetflixSans-Light.woff2');
+        font-weight: 300;
+    }
+    @font-face {
+        font-family: 'netflix-medium';
+        src: url('@/assets/fonts/netflix-sans-font/NetflixSans-Medium.woff2');
+        font-weight: 500;
+    }
+    @font-face {
+        font-family: 'netflix-bold';
+        src: url('@/assets/fonts/netflix-sans-font/NetflixSans-Bold.woff2');
+        font-weight: bold;
+    }
+    
+    
+    @custom-media --viewport-medium (min-width: 600px);
+    :root {
+        /* base color */
+        --color-primary: #E50914;
+        --color-secondary: #000000;
+        --color-text-header: white;
+        --color-text-body: white;
+
+        /* base font */
+        --font-family: 'netflix-regular',Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+        --font-family-light : 'netflix-light';
+        --font-family-medium : 'netflix-medium';
+        --font-family-bold : 'netflix-bold';
+        --font-size-base : 16px;
+        --line-height: 1.25;
+
+        /* base breakpoint */
+        --break-medium: 600px;
+        --break-lg: 960px;
+
+        /* component button */
+        --button-text-color: white;
+
+        /* component input  */
+        --input-label-color: grey;
+        --input-text-color: white;
+    }
+
+    html {
+        font-family: var(--font-family);
+        font-size: var(--font-size-base);
+    }
+
+    h1,h2 {
+        font-family: var(--font-family-bold);
+        font-weight: bold;
+        font-size: 2rem;
+        color: var(--color-text-header);
+        line-height: var(--line-height);
+
+        @media screen and (min-width: 960px) {
+            font-size: 3rem;
+        }
+    }
+
+    p {
+        font-size: 1.125rem;
+        color: var(--color-text-body);
+    }
+
+    a {
+        font-size: 14px;
+    }
+
+    small {
+        font-size: 12px;
+    }
+
+    img {
+        display: block;
+    }
+}
+
+@layer utilities {
+    .bg-img-center {
+        background-position: center;
+        background-size: cover;
+    }
+}
